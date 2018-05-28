@@ -20,7 +20,7 @@ module.exports = {
 	},
 
 	resolve: {
-		extensions: ['.jsx', '.js', '.json', '.less'],
+		extensions: ['.jsx', '.js', '.json', '.scss'],
 		modules: [
 			path.resolve(__dirname, "src/lib"),
 			path.resolve(__dirname, "node_modules"),
@@ -49,7 +49,7 @@ module.exports = {
 			},
 			{
 				// Transform our own .(less|css) files with PostCSS and CSS-modules
-				test: /\.(less|css)$/,
+				test: /\.(scss|css)$/,
 				include: [path.resolve(__dirname, 'src/components')],
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
@@ -68,14 +68,14 @@ module.exports = {
 							}
 						},
 						{
-							loader: 'less-loader',
+							loader: 'sass-loader',
 							options: { sourceMap: CSS_MAPS }
 						}
 					]
 				})
 			},
 			{
-				test: /\.(less|css)$/,
+				test: /\.(scss|css)$/,
 				exclude: [path.resolve(__dirname, 'src/components')],
 				use: ExtractTextPlugin.extract({
 					fallback: 'style-loader',
@@ -94,7 +94,7 @@ module.exports = {
 							}
 						},
 						{
-							loader: 'less-loader',
+							loader: 'sass-loader',
 							options: { sourceMap: CSS_MAPS }
 						}
 					]

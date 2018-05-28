@@ -1,4 +1,4 @@
-.fill() {
+%fill {
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -6,7 +6,7 @@
 	height: 100%;
 }
 
-.scroll() {
+%scroll {
 	overflow: auto;
 	overflow-scrolling: touch;
 

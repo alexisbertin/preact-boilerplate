@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import style from './style.less';
+import style from './style.scss';
 
 export default () => {
 	return (
